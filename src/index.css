@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Bellgoo Luxury Design System — Black + Gold Futuristic */
+
+@layer base {
+  :root {
+    --background: 0 0% 4%;
+    --foreground: 45 30% 92%;
+
+    --card: 0 0% 6%;
+    --card-foreground: 45 30% 92%;
+
+    --popover: 0 0% 5%;
+    --popover-foreground: 45 30% 92%;
+
+    /* Gold primary */
+    --primary: 43 65% 55%;
+    --primary-foreground: 0 0% 4%;
+    --primary-glow: 45 85% 70%;
+
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 45 30% 92%;
+
+    --muted: 0 0% 10%;
+    --muted-foreground: 45 10% 65%;
+
+    --accent: 43 65% 55%;
+    --accent-foreground: 0 0% 4%;
+
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 43 30% 20%;
+    --input: 0 0% 12%;
+    --ring: 43 65% 55%;
+
+    --radius: 0.75rem;
+
+    /* Custom design tokens */
+    --gold: 43 65% 55%;
+    --gold-bright: 45 85% 65%;
+    --gold-deep: 38 55% 40%;
+    --onyx: 0 0% 4%;
+    --onyx-light: 0 0% 8%;
+
+    --gradient-gold: linear-gradient(135deg, hsl(43 65% 55%), hsl(45 85% 70%), hsl(38 55% 40%));
+    --gradient-dark: linear-gradient(180deg, hsl(0 0% 4%) 0%, hsl(0 0% 7%) 100%);
+    --gradient-hero-overlay: linear-gradient(90deg, hsl(0 0% 0% / 0.85) 0%, hsl(0 0% 0% / 0.55) 50%, hsl(0 0% 0% / 0.2) 100%);
+    --gradient-radial-gold: radial-gradient(circle at center, hsl(43 65% 55% / 0.15) 0%, transparent 70%);
+
+    --shadow-gold: 0 10px 40px -10px hsl(43 65% 55% / 0.4);
+    --shadow-luxe: 0 25px 60px -15px hsl(0 0% 0% / 0.8);
+    --shadow-glow: 0 0 60px hsl(43 65% 55% / 0.35);
+
+    --transition-smooth: cubic-bezier(0.22, 1, 0.36, 1);
+
+    --sidebar-background: 0 0% 5%;
+    --sidebar-foreground: 45 30% 92%;
+    --sidebar-primary: 43 65% 55%;
+    --sidebar-primary-foreground: 0 0% 4%;
+    --sidebar-accent: 0 0% 10%;
+    --sidebar-accent-foreground: 45 30% 92%;
+    --sidebar-border: 43 30% 20%;
+    --sidebar-ring: 43 65% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+    background-image:
+      radial-gradient(ellipse at top, hsl(43 30% 15% / 0.15) 0%, transparent 50%),
+      radial-gradient(ellipse at bottom, hsl(43 30% 10% / 0.1) 0%, transparent 50%);
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+  }
+
+  ::selection {
+    background: hsl(var(--gold) / 0.3);
+    color: hsl(var(--foreground));
+  }
+}
+
+@layer utilities {
+  .text-gradient-gold {
+    background: var(--gradient-gold);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .bg-gradient-gold {
+    background: var(--gradient-gold);
+  }
+
+  .border-gold {
+    border-color: hsl(var(--gold) / 0.4);
+  }
+
+  .glass-panel {
+    background: hsl(0 0% 6% / 0.6);
+    backdrop-filter: blur(24px) saturate(150%);
+    -webkit-backdrop-filter: blur(24px) saturate(150%);
+    border: 1px solid hsl(var(--gold) / 0.2);
+  }
+
+  .glass-gold {
+    background: linear-gradient(135deg, hsl(43 65% 55% / 0.08), hsl(0 0% 0% / 0.6));
+    backdrop-filter: blur(20px);
+    border: 1px solid hsl(var(--gold) / 0.25);
+  }
+
+  .shadow-gold {
+    box-shadow: var(--shadow-gold);
+  }
+
+  .shadow-luxe {
+    box-shadow: var(--shadow-luxe);
+  }
+
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .gold-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, hsl(var(--gold) / 0.6), transparent);
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-shimmer {
+    background: linear-gradient(110deg, transparent 30%, hsl(var(--gold) / 0.4) 50%, transparent 70%);
+    background-size: 200% 100%;
+    animation: shimmer 3s linear infinite;
+  }
+
+  .animate-glow-pulse {
+    animation: glow-pulse 3s ease-in-out infinite;
+  }
+
+  .animate-mist {
+    animation: mist 8s ease-in-out infinite;
+  }
+
+  .animate-fade-up {
+    animation: fade-up 0.8s var(--transition-smooth) both;
+  }
+
+  .animate-fade-in {
+    animation: fade-in 1s ease-out both;
+  }
+
+  .animate-scale-in {
+    animation: scale-in 0.5s var(--transition-smooth) both;
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 20px hsl(var(--gold) / 0.3); }
+  50% { box-shadow: 0 0 60px hsl(var(--gold) / 0.6); }
+}
+
+@keyframes mist {
+  0%, 100% { opacity: 0.3; transform: translateY(0) scale(1); }
+  50% { opacity: 0.6; transform: translateY(-20px) scale(1.1); }
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scale-in {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
