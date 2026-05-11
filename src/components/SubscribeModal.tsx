@@ -126,7 +126,7 @@ export const SubscribeModal = () => {
             </Button>
           </form>
           <p className="text-[10px] uppercase tracking-widest text-muted-foreground mt-4 text-center">
-            16 Stadiums · FIFA World Cup 2026
+           Soon will be in 16 Stadiums · Anywhere. Always. Infinite.
           </p>
         </div>
       </div>

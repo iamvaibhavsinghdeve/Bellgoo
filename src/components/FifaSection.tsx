@@ -23,7 +23,7 @@ export const FifaSection = () => (
           Global <span className="text-gradient-gold italic">Stadium</span> Presence
         </h2>
         <p className="text-muted-foreground mt-6 leading-relaxed">
-          Bellgoo brings luxury fragrance to the 2026 World Cup - soon we will be in 16 host stadiums across the United States, Canada, and Mexico.
+          Bellgoo brings luxury fragrance to the 2026 World Cup - soon we will be in a (host) host stadiums near you across the United States, Canada, and Mexico.
         </p>
       </div>
 
